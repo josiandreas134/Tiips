@@ -1,0 +1,259 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title> Tiips </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="manifest" href="site.webmanifest">
+		<link rel="shortcut icon" type="image/x-icon" href="https://static.wixstatic.com/media/79caf5_e30c1a3178b846d084d3f78183c79a33~mv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/79caf5_e30c1a3178b846d084d3f78183c79a33~mv2.png">
+
+        <!-- CSS here -->
+            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+            <link rel="stylesheet" href="/css/bootstrap.min.css">
+            <link rel="stylesheet" href="/css/owl.carousel.min.css">
+            <link rel="stylesheet" href="/css/slicknav.css">
+            <link rel="stylesheet" href="/css/flaticon.css">
+            <link rel="stylesheet" href="/css/animate.min.css">
+            <link rel="stylesheet" href="/css/magnific-popup.css">
+            <link rel="stylesheet" href="/css/fontawesome-all.min.css">
+            <link rel="stylesheet" href="/css/themify-icons.css">
+            <link rel="stylesheet" href="/css/slick.css">
+            <link rel="stylesheet" href="/css/nice-select.css">
+            <link rel="stylesheet" href="/css/style.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+            
+            />
+   </head>
+
+   <body>
+    <!-- Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="/img/logo/tips.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+    <header>
+        <!-- Header Start -->
+        <div class="header-area header-transparent">
+                <div class="main-header  header-sticky">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <!-- Logo -->
+                            <div class="col-xl-2 col-lg-2 col-md-1">
+                                <div class="logo">
+                                    <a href="index.html"><img src="/img/logo/tips.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-xl-10 col-lg-10 col-md-10">
+                            <div class="menu-main d-flex align-items-center justify-content-end">
+                                <!-- Main-menu -->
+                                <div class="main-menu f-right d-none d-lg-block">
+                                    <nav> 
+                                        <ul id="navigation">  
+                                            <li><a href="index.html">Home</a></li>
+                                            <li class="active"><a href="stock.html">Stock</a></liclass="active">
+                                            <li><a href="portofolio.html">Portofolio</a></li>
+                                            <li><a href="news.html">News</a></li>
+                                            <li><a href="#">Contact</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            </div>   
+                            <!-- Mobile Menu -->
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <!-- Header End -->
+    </header>
+    <main>
+        <div id="mainstock" class="container">
+            <div class="row justify-content-center">
+                <div class="invest">
+                    <h1 data-animation="fadeInLeft" data-delay="1s">Make Your Investment Now!</h1>
+                </div>
+            </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                    <!-- form -->
+                    <h2 style="font-size: 36px; font-weight: 200; color: #21439c;">
+                        Buy Stocks:
+                    </h2>
+
+                    <form>
+                        <h2 style="font-size: 20px; margin-bottom: 0px;" >Select Stock:</h2>
+                        <div id="plus" class="form-group row">
+                            <select id="saham" class="form-control">
+                                <option id="HKG:0001" value="HKG:0001"> HKG:0001 - Cheung Kong (Holdings) Ltd </option>
+                                <option id="HKG:0002" value="HKG:0002"> HKG:0002 - CLP Holdings Ltd </option>
+                                <option id="HKG:0003" value="HKG:0003"> HKG:0003 - Hong Kong and China Gas Co. Ltd </option>
+                                <option id="HKG:0004" value="HKG:0004"> HKG:0004 -Wharf(Holdings) Ltd </option>
+                                <option id="HKG:0005" value="HKG:0005"> HKG:0005 - HSBC Holdings plc </option>
+                            </select>           
+                            <button class="w3-button w3-teal" id="tambah">+</button>    
+                        </div>
+
+                        <h2 style="font-size: 20px; margin-bottom: 0px;">Investment Contribution period:</h2>
+                        <div class="input-group row">
+                            <input
+                                class="form-control" id="duration" type="number" name="duration" placeholder="Duration"
+                                required
+                            />
+                            <span class="input-group-addon">
+                                <select  name="duration" id="duration2">
+                                <option value="Week">Week(s)</option>
+                                <option value="Month">Month(s)</option>
+                                </select    >
+                            </span>
+                        </div>
+            
+                        <h2 style="font-size: 20px; margin-bottom: 0px;">Investment Amount</h2>
+                        <div class="amount-group row">
+                            <label required for="amount" class="col-md-1 col-form-label">HKD$: </label>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="amount" name="amount" placeholder="0">
+                            </div>
+                        </div>
+
+                        <div class="form-group row p-md-3">
+                            <div id="stockbutton" class="col-md-offset-0">
+                                <button type="submit" class="btn" onclick="Submit()"> Buy </button>
+                            </div>
+                        </div>
+            
+                    </form>
+                    </div>
+                    
+                    <div class="col col-md-6 ">
+                        <div class="img animate__animated animate__bounce animate__slow" >
+                            <img src="./img/logo/investment-icon-png-6.png" width="300" height="300"
+                             class="center">
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+      
+        
+        
+    </main>
+    <footer>
+        <!-- Footer Start-->
+        <div class="footer-area">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                        <div class="single-footer-caption mb-50">
+                            <div class="single-footer-caption mb-30 mt-50">
+                                <!-- logo -->
+                                <div class="footer-logo">
+									<a href="index.html"><img src="/img/logo/tips.png" alt=""></a>
+									<p>Easy Investment.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>Quick Link</h4>
+                                <ul>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="stock.html">Stock</a></li>
+                                    <li><a href="#">Portofolio</a></li>
+                                    <li><a href="#">News</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                           <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+								<h4>Contact Us</h4>
+									<address>701, 7/F, Times Media Center, 133 Wan Chai Road, Wan Chai, <br> 
+                                    Hong Kong <br>
+                                    <a href="mailto:hello@tiips.com">hello@tiips.com</a>
+                                    </address>
+                            </div>
+                        </div>
+					</div>
+					<div class="footer-bottom">
+						<div class="row d-flex justify-content-between align-items-center">
+							<div class="col-xl-3 col-lg-4">
+								<!-- Footer Social -->
+								<div class="footer-social f-right">
+									<a href="https://www.linkedin.com/company/tiips/"><i class="fab fa-linkedin"></i></a>
+									<a href="https://www.facebook.com/tiipsinvest"><i class="fab fa-facebook-square"></i></a>
+									<a href="https://www.instagram.com/tiips_invest/"><i class="fab fa-instagram"></i></a>
+								</div>
+							</div>
+						</div>
+				   </div>
+				</div>
+            </div>
+        </div>
+        <!-- Footer End-->
+    </footer>
+    <!-- Scroll Up -->
+    <div id="back-top" >
+        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+    </div>
+
+
+    <!-- JS here -->
+		<!-- All JS Custom Plugins Link Here here -->
+        <script src="./js/vendor/modernizr-3.5.0.min.js"></script>
+		<!-- Jquery, Popper, Bootstrap -->
+		<script src="./js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="./js/popper.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+	    <!-- Jquery Mobile Menu -->
+        <script src="./js/jquery.slicknav.min.js"></script>
+
+		<!-- Jquery Slick , Owl-Carousel Plugins -->
+        <script src="./js/owl.carousel.min.js"></script>
+        <script src="./js/slick.min.js"></script>
+		<!-- One Page, Animated-HeadLin -->
+        <script src="./js/wow.min.js"></script>
+		<script src="./js/animated.headline.js"></script>
+        <script src="./js/jquery.magnific-popup.js"></script>
+
+		<!-- Nice-select, sticky -->
+        <script src="./js/jquery.nice-select.min.js"></script>
+		<script src="./js/jquery.sticky.js"></script>>
+        
+		<!-- Jquery Plugins, main Jquery -->	
+        <script src="./js/plugins.js"></script>
+        <script src="./js/main.js"></script>
+
+        <script src=./script.js></script>       
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script> 
+        <script type="text/javascript">
+            $(function ()
+             {
+                 var i = 1;
+                $("#tambah").click(function() 
+                {
+                    $('#plus').clone().attr('id','plus' +i).insertBefore('#plus');
+                    i=i+1;
+                })
+             })
+         
+            
+        </script>
+         
+    </body>
+</html>
