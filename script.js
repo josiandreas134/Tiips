@@ -1,3 +1,6 @@
+function clearstorage(){
+    localStorage.clear();
+}
 
 function Submit(){
     if (localStorage.clickcount) {
@@ -26,7 +29,10 @@ window.onload = function GenerateTable() {
     this.console.log(localStorage.clickcount);
 
     var customers = new Array();
-    customers.push(["Stock", "Duration", "Amount"]);
+    
+    if(this.localStorage.length > 3){
+        customers.push(["Stock", "Duration", "Amount"]);
+    }
 
     var chart = new CanvasJS.Chart("chartContainer", {
         animationEnabled: true,
