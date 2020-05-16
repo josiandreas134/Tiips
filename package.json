@@ -18,7 +18,7 @@
     "url": "https://github.com/josiandreas134/Tiips/issues"
   },
   "homepage": "https://github.com/josiandreas134/Tiips#readme",
-  "devDependencies": {
-    //"lite-server": "^2.5.4"
+  "dependencies": {
+    "lite-server": "^2.5.4"
   }
 }
