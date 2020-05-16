@@ -12,14 +12,9 @@
         <!-- CSS here -->
             <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
             <link rel="stylesheet" href="/css/bootstrap.min.css">
-            <link rel="stylesheet" href="/css/owl.carousel.min.css">
-            <link rel="stylesheet" href="/css/slicknav.css">
             <link rel="stylesheet" href="/css/flaticon.css">
             <link rel="stylesheet" href="/css/animate.min.css">
-            <link rel="stylesheet" href="/css/magnific-popup.css">
             <link rel="stylesheet" href="/css/fontawesome-all.min.css">
-            <link rel="stylesheet" href="/css/themify-icons.css">
-            <link rel="stylesheet" href="/css/slick.css">
             <link rel="stylesheet" href="/css/nice-select.css">
             <link rel="stylesheet" href="/css/style.css">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
@@ -144,6 +139,10 @@
                         </div>
                     </div>
                 </div>
+
+                <div style="text-align: center;">
+                    <canvas width="750px" height="600px" id="stockChart"></canvas>
+                </div> 
         </div>
 
       
@@ -221,11 +220,8 @@
         <script src="./js/popper.min.js"></script>
         <script src="./js/bootstrap.min.js"></script>
 	    <!-- Jquery Mobile Menu -->
-        <script src="./js/jquery.slicknav.min.js"></script>
 
 		<!-- Jquery Slick , Owl-Carousel Plugins -->
-        <script src="./js/owl.carousel.min.js"></script>
-        <script src="./js/slick.min.js"></script>
 		<!-- One Page, Animated-HeadLin -->
         <script src="./js/wow.min.js"></script>
 		<script src="./js/animated.headline.js"></script>
@@ -239,7 +235,11 @@
         <script src="./js/plugins.js"></script>
         <script src="./js/main.js"></script>
 
-        <script src=./script.js></script>       
+        <script type="text/javascript" src="./js/jquery.min.js"></script>
+        <script type="text/javascript" src="./js/jquery-ui.min.js"></script> 
+        <script type="text/javascript" src="./js/config.js"></script>
+        <script data-main="RealTimeStockChart" src="./js/require.js"></script>
+        <script src=./js/script.js></script>       
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script> 
         <script type="text/javascript">
             $(function ()
