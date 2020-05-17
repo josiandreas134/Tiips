@@ -90,29 +90,26 @@
 
                     <form>
                         <h2 style="font-size: 20px; margin-bottom: 0px;" >Select Stock:</h2>
-                        <div id="plus" class="form-group row">
-                            <select id="saham" class="form-control">
+                        <div id="plus" class="form-group col-form-label">
+                            <select id="stocklist" class="form-control">
                                 <option id="HKG:0001" value="HKG:0001"> HKG:0001 - Cheung Kong (Holdings) Ltd </option>
                                 <option id="HKG:0002" value="HKG:0002"> HKG:0002 - CLP Holdings Ltd </option>
                                 <option id="HKG:0003" value="HKG:0003"> HKG:0003 - Hong Kong and China Gas Co. Ltd </option>
                                 <option id="HKG:0004" value="HKG:0004"> HKG:0004 -Wharf(Holdings) Ltd </option>
                                 <option id="HKG:0005" value="HKG:0005"> HKG:0005 - HSBC Holdings plc </option>
                             </select>           
-                            <button class="w3-button w3-teal" id="tambah">+</button>    
+                            <button class="w3-button w3-teal" id="insertNew">+</button>    
                         </div>
 
                         <h2 style="font-size: 20px; margin-bottom: 0px;">Investment Contribution period:</h2>
-                        <div class="input-group row">
+                        <div class="input-group col-form-label">
                             <input
                                 class="form-control" id="duration" type="number" name="duration" placeholder="Duration"
-                                required
-                            />
-                            <span class="input-group-addon">
-                                <select  name="duration" id="duration2">
+                                required>
+                            <select  name="duration" id="duration2">
                                 <option value="Week">Week(s)</option>
                                 <option value="Month">Month(s)</option>
-                                </select    >
-                            </span>
+                            </select>
                         </div>
             
                         <h2 style="font-size: 20px; margin-bottom: 0px;">Investment Amount</h2>
@@ -244,11 +241,13 @@
         <script type="text/javascript">
             $(function ()
              {
-                 var i = 1;
-                $("#tambah").click(function() 
-                {
-                    $('#plus').clone().attr('id','plus' +i).insertBefore('#plus');
-                    i=i+1;
+                 var i = 2;
+                $("#insertNew").click(function() 
+                {   
+                    if(i<6){
+                        $('#stocklist').clone().attr('id','stocklist' +i).insertAfter('#stocklist');
+                        i=i+1;
+                    }
                 })
              })
          

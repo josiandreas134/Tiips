@@ -8,20 +8,20 @@ define(["require", "exports", './js/MindFusion.Charting'], function (require, ex
 	
 	var stockChart = new Controls.CandlestickChart(document.getElementById('stockChart'));
 	
-	stockChart.title = "HSBC";
+	stockChart.title = "Hang Seng Index";
 	stockChart.theme.titleFontSize = 16;
 	
 	stockChart.candlestickWidth = 12;
 	
 	stockChart.showLegend = false;
 	stockChart.showXCoordinates = false;
-	stockChart.xAxisLabelRotationAngle = 30;
+	stockChart.xAxisLabelRotationAngle = 40;
 	
 	stockChart.xAxis.minValue = 0;
-	stockChart.xAxis.interval = 1;
-	stockChart.xAxis.maxValue = 40;
+	stockChart.xAxis.interval = 5;
+	stockChart.xAxis.maxValue = 35;
 	stockChart.xAxis.title = "Time";
-	stockChart.yAxis.title = "Price (USD)";
+	stockChart.yAxis.title = "Value";
 	
 	stockChart.gridType = Charting.GridType.Horizontal;
 	stockChart.theme.gridColor1 = new Drawing.Color("#ffffff");
@@ -41,12 +41,10 @@ define(["require", "exports", './js/MindFusion.Charting'], function (require, ex
 	
 	function updateStock()
 	{
-		$.getJSON("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=0005.HK&interval=1min&apikey=KOE7PMEOOPD18BYD", function(json) {
+		$.getJSON("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=^HSI&interval=5min&apikey=KOE7PMEOOPD18BYD", function(json) {
 		
-		    var times = json["Time Series (1min)"];
-			
+		    var times = json["Time Series (5min)"];
 			var update = false;
-			
 			if(stockChart.series.count() > 0)
 				  update = true;
 			  
@@ -81,6 +79,6 @@ define(["require", "exports", './js/MindFusion.Charting'], function (require, ex
 		});
 	}
 	
-	setInterval(updateStock, 5000);
+	//setInterval(updateStock, 5000);
 	
 });

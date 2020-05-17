@@ -8,7 +8,7 @@ function Submit(){
       } else {
         localStorage.clickcount = 1;
       }
-    var stock = document.getElementById("saham");
+    var stock = document.getElementById("stocklist");
     var selected = stock.options[stock.selectedIndex].value;
     var durasi = document.getElementById("duration").value;
     var dur = document.getElementById("duration2");
@@ -17,21 +17,39 @@ function Submit(){
     localStorage['stock'+localStorage.clickcount] = selected;
     localStorage['duration'+localStorage.clickcount] = durasi+" "+durasi2;
     localStorage['amount'+localStorage.clickcount]= banyaknya;
+
+    if(document.getElementById("stocklist2") != null){
+        var stock2 = document.getElementById("stocklist2");
+        var selected2 = stock2.options[stock2.selectedIndex].value;
+        localStorage['stock'+localStorage.clickcount] = selected+" "+selected2;
+    }
+    if(document.getElementById("stocklist3") != null){
+        var stock3 = document.getElementById("stocklist3");
+        var selected3 = stock3.options[stock3.selectedIndex].value;
+        localStorage['stock'+localStorage.clickcount] = selected+" "+selected2+" "+selected3;
+    }
+    if(document.getElementById("stocklist4") != null){
+        var stock4 = document.getElementById("stocklist4");
+        var selected4 = stock4.options[stock4.selectedIndex].value;
+        localStorage['stock'+localStorage.clickcount] = selected+" "+selected2+" "+selected3+" "+selected4;
+    }
+    if(document.getElementById("stocklist5") != null){
+        var stock5 = document.getElementById("stocklist5");
+        var selected5 = stock5.options[stock5.selectedIndex].value;
+        localStorage['stock'+localStorage.clickcount] = selected+" "+selected2+" "+selected3+" "+selected4+" "+selected5;
+    }
+
 }
 
 window.onload = function GenerateTable() {
 
     //Build an array containing Customer records.
     //this.console.log(tracking_num);
-    this.console.log(localStorage['stock2']);
-    this.console.log(localStorage['duration2']);
-    this.console.log(localStorage['amount2']);
-    this.console.log(localStorage.clickcount);
 
     var customers = new Array();
     
     if(this.localStorage.length > 3){
-        customers.push(["Stock", "Duration", "Amount"]);
+        customers.push(["Stock", "Duration", "Amount (HKD$)"]);
     }
 
     var chart = new CanvasJS.Chart("chartContainer", {
@@ -53,12 +71,7 @@ window.onload = function GenerateTable() {
     });
 
     for(var i=0; i < localStorage.length ; i++){
-        this.console.log(i);
         if(((i%3) == 0) && i != 0){
-            this.console.log("good");
-            this.console.log("stock"+(i/3));
-            this.console.log("duration"+(i/3));
-            this.console.log("amount"+(i/3));
             customers.push([localStorage.getItem("stock"+(i/3)),localStorage.getItem("duration"+(i/3)), localStorage.getItem("amount"+(i/3))]);
             chart.options.data[0].dataPoints.push({y:localStorage.getItem("amount"+(i/3)),label:localStorage.getItem("stock"+(i/3)) });
         }
